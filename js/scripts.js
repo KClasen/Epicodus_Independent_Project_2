@@ -53,15 +53,21 @@
     const num5 = parseInt(document.querySelector("input#input5").value);
     //const operator = document.querySelector("input[name='operator']:checked").value;
 
-    let result;
-    if (typeof num1 !== Number) {
-        result = "Please enter a number";
-    } else if (num1 <= 11) {
-        result = "Please enter a number between 1 and 10";
-    }
+    // let result;
+    // if (typeof num1 !== Number) {
+    //     result = "Please enter a number";
+    // }; 
+
+    // if (num1 >= 11) {
+    //     result = "Please enter a number between 1 and 10";
+    // };
   
     let result1;
-    if (num1 <= num2) {
+    if (typeof num1 !== "number" || typeof num2 !== "number" || typeof num3 !== "number") {
+        result1 = "Please enter a number between 1 and 10";
+    } else if (num1 >= 11 || num2 >= 11 || num3 >= 11) {
+        result1 = "Please enter a number between 1 and 10"
+    } else if (num1 <= num2) {
       result1 = "Ruby";
     } else if (num1 >= num3) {
       result1 = "C#";
@@ -76,12 +82,12 @@
 
     let result3;
     if (num3 <= num4) {
-        result2 = "JavaScript";
+        result3 = "Rust";
     } else if (num3 >= num5) {
-        result2 = "Python";
+        result3 = "Swift";
     } 
 
-    document.getElementById("output").innerText = result;
+    // document.getElementById("output").innerText = result;
     document.getElementById("output1").innerText = result1;
     document.getElementById("output2").innerText = result2;
     document.getElementById("output3").innerText = result3;
@@ -91,3 +97,16 @@
     const form = document.getElementById("questions")
     form.addEventListener("submit", handleSelector);
   });
+
+//   form.addEventListener("submit", function() {
+//     resetBtn.removeAttribute("class");
+//   }); 
+
+//   resetBtn.addEventListener("click", function() {
+//     // story.setAttribute("class", "hidden");
+//     document.querySelector("input#input1").value = null;
+//     document.querySelector("input#input2").value = null;
+//     document.querySelector("input#input3").value = null;
+//     document.querySelector("input#input4").value = null;
+//     document.querySelector("input#input5").value = null;
+//   });
