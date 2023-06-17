@@ -63,7 +63,7 @@
     // };
   
     let result1;
-    if (typeof num1 !== "number" || typeof num2 !== "number" || typeof num3 !== "number") {
+    if (typeof(num1) !== "number" || typeof(num2) !== "number" || typeof(num3) !== "number") {
         result1 = "Please enter a number between 1 and 10";
     } else if (num1 >= 11 || num2 >= 11 || num3 >= 11) {
         result1 = "Please enter a number between 1 and 10"
@@ -74,14 +74,22 @@
     }
 
     let result2;
-    if (num2 <= num3) {
+    if (typeof(num2) !== "number" || typeof(num3) !== "number" || typeof(num4) !== "number") {
+        result1 = "Please enter a number between 1 and 10";
+    } else if (num1 >= 11 || num2 >= 11 || num3 >= 11) {
+        result1 = "Please enter a number between 1 and 10"
+    } else if (num2 <= num3) {
         result2 = "JavaScript";
     } else if (num2 >= num4) {
         result2 = "Python";
     } 
 
     let result3;
-    if (num3 <= num4) {
+    if (typeof(num1) !== "number" || typeof(num2) !== "number" || typeof(num3) !== "number") {
+        result1 = "Please enter a number between 1 and 10";
+    } else if (num1 >= 11 || num2 >= 11 || num3 >= 11) {
+        result1 = "Please enter a number between 1 and 10"
+    } else if (num3 <= num4) {
         result3 = "Rust";
     } else if (num3 >= num5) {
         result3 = "Swift";
@@ -95,18 +103,36 @@
   
   window.addEventListener("load", function() {
     const form = document.getElementById("questions")
+    const resetBtn = document.getElementById("reset");
     form.addEventListener("submit", handleSelector);
+    form.addEventListener("submit", function() {
+        resetBtn.removeAttribute("class");
+
   });
+  
+    
+      resetBtn.addEventListener("click", function() {
+            questions.setAttribute("class", "hidden");
+        document.querySelector("input#input1").value = null;
+        document.querySelector("input#input2").value = null;
+        document.querySelector("input#input3").value = null;
+        document.querySelector("input#input4").value = null;
+        document.querySelector("input#input5").value = null;
+      });
+
+    });
+
+
 
 //   form.addEventListener("submit", function() {
 //     resetBtn.removeAttribute("class");
 //   }); 
 
 //   resetBtn.addEventListener("click", function() {
-//     // story.setAttribute("class", "hidden");
+//         questions.setAttribute("class", "hidden");
 //     document.querySelector("input#input1").value = null;
 //     document.querySelector("input#input2").value = null;
 //     document.querySelector("input#input3").value = null;
 //     document.querySelector("input#input4").value = null;
 //     document.querySelector("input#input5").value = null;
-//   });
+//   })
