@@ -52,6 +52,13 @@
     const num4 = parseInt(document.querySelector("input#input4").value);
     const num5 = parseInt(document.querySelector("input#input5").value);
     //const operator = document.querySelector("input[name='operator']:checked").value;
+
+    let result;
+    if (typeof num1 !== Number) {
+        result = "Please enter a number";
+    } else if (num1 <= 11) {
+        result = "Please enter a number between 1 and 10";
+    }
   
     let result1;
     if (num1 <= num2) {
@@ -68,12 +75,13 @@
     } 
 
     let result3;
-    if (num3 <= num4 && num3 <= num5) {
-        result3 = "Rust";
-    } else if (num3 >= num4 && num3 >= num5) {
-        result3 = "Swift";
+    if (num3 <= num4) {
+        result2 = "JavaScript";
+    } else if (num3 >= num5) {
+        result2 = "Python";
     } 
 
+    document.getElementById("output").innerText = result;
     document.getElementById("output1").innerText = result1;
     document.getElementById("output2").innerText = result2;
     document.getElementById("output3").innerText = result3;
