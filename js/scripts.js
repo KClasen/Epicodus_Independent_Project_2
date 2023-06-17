@@ -49,42 +49,30 @@
     const num1 = parseInt(document.querySelector("input#input1").value);
     const num2 = parseInt(document.querySelector("input#input2").value);
     const num3 = parseInt(document.querySelector("input#input3").value);
-    //const num4 = parseInt(document.querySelector("input#input4").value);
-  //  const num5 = parseInt(document.querySelector("input#input5").value);
+    const num4 = parseInt(document.querySelector("input#input4").value);
+    const num5 = parseInt(document.querySelector("input#input5").value);
     //const operator = document.querySelector("input[name='operator']:checked").value;
   
     let result1;
-    if (num1 === num2 && num1 === num3) {
-      result1 = "Equilateral";
-    } else if (num1 === num2 || num1 === num3 || num2 === num3) {
-      result1 = "Isosceles";
-    } else if (num1 !== num2 && num1 !== num3 && num2 !== num3) {
-      result1 = "Scalene";
-    } else if (num1 + num2 <= num3 || num2 + num3 <= num1 || num3 + num1 <= num2) {
-      result1 = "NOT a triangle";
+    if (num1 <= num2 && num1 <= num3) {
+      result1 = "Ruby";
+    } else if (num1 >= num2 && num1 >= num3) {
+      result1 = "C#";
     } 
 
     let result2;
-    if (num1 === num2 && num1 === num3) {
-      result2 = "Equilateral";
-    } else if (num1 === num2 || num1 === num3 || num2 === num3) {
-      result2 = "Isosceles";
-    } else if (num1 !== num2 && num1 !== num3 && num2 !== num3) {
-      result2 = "Scalene";
-    } else if (num1 + num2 <= num3 || num2 + num3 <= num1 || num3 + num1 <= num2) {
-      result2 = "NOT a triangle";
-    }
+    if (num2 <= num3 && num2 <= num4) {
+        result1 = "JavaScript";
+    } else if (num2 >= num3 && num2 >= num4) {
+        result1 = "Python";
+    } 
 
     let result3;
-    if (num1 === num2 && num1 === num3) {
-      result3 = "Equilateral";
-    } else if (num1 === num2 || num1 === num3 || num2 === num3) {
-      result3 = "Isosceles";
-    } else if (num1 !== num2 && num1 !== num3 && num2 !== num3) {
-      result3 = "Scalene";
-    } else if (num1 + num2 <= num3 || num2 + num3 <= num1 || num3 + num1 <= num2) {
-      result3 = "NOT a triangle";
-    }
+    if (num3 <= num4 && num3 <= num5) {
+        result1 = "Rust";
+    } else if (num3 >= num4 && num3 >= num5) {
+        result1 = "Swift";
+    } 
 
     document.getElementById("output1").innerText = result1;
     document.getElementById("output2").innerText = result2;
