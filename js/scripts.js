@@ -54,24 +54,24 @@
     //const operator = document.querySelector("input[name='operator']:checked").value;
   
     let result1;
-    if (num1 <= num2 && num1 <= num3) {
+    if (num1 <= num2) {
       result1 = "Ruby";
-    } else if (num1 >= num2 && num1 >= num3) {
+    } else if (num1 >= num3) {
       result1 = "C#";
-    } 
+    }
 
     let result2;
-    if (num2 <= num3 && num2 <= num4) {
-        result1 = "JavaScript";
-    } else if (num2 >= num3 && num2 >= num4) {
-        result1 = "Python";
+    if (num2 <= num3) {
+        result2 = "JavaScript";
+    } else if (num2 >= num4) {
+        result2 = "Python";
     } 
 
     let result3;
     if (num3 <= num4 && num3 <= num5) {
-        result1 = "Rust";
+        result3 = "Rust";
     } else if (num3 >= num4 && num3 >= num5) {
-        result1 = "Swift";
+        result3 = "Swift";
     } 
 
     document.getElementById("output1").innerText = result1;
