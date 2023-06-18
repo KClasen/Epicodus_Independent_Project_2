@@ -1,5 +1,3 @@
-
-   // These are the scripts from the Mad Libs project.
 function handleSelector(event) {
   event.preventDefault();
   const num1 = parseInt(document.querySelector("input#input1").value);
