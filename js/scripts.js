@@ -8,23 +8,35 @@ function handleSelector(event) {
   const num4 = parseInt(document.querySelector("input#input4").value);
   const num5 = parseInt(document.querySelector("input#input5").value);
    
-  
+
   let result1;
-    if (num1 <= num2 || num1 === num2) {
+    if (num1 > 10 || num2 > 10 || num3 > 10) {
+        result1 = "Please enter a number between 1 and 10";
+    } else if (isNaN(num1) || isNaN(num2) || isNaN(num3)) {
+      result1 = "Please enter a number between 1 and 10";
+    } else if (num1 <= num2 || num1 === num2) {
       result1 = "Ruby";
     } else if (num1 >= num3 || num1 === num3) {
       result1 = "C#";
     }
 
   let result2;
-    if (num2 <= num3 || num2 === num3) {
+    if (num2 > 10 || num3 > 10 || num4 > 10) {
+        result2 = "Please enter a number between 1 and 10";
+    } else if (isNaN(num2) || isNaN(num3) || isNaN(num4)) {
+        result2 = "Please enter a number between 1 and 10";
+    } else if (num2 <= num3 || num2 === num3) {
       result2 = "JavaScript";
     } else if (num2 >= num4 || num2 === num4) {
       result2 = "Python";
     } 
 
   let result3;
-    if (num3 <= num4 || num3 === num4) {
+    if (num3 > 10 || num4 > 10 || num5 > 10) {
+        result3 = "Please enter a number between 1 and 10";
+    } else if (isNaN(num3) || isNaN(num4) || isNaN(num5)) {
+        result3 = "Please enter a number between 1 and 10";
+    } else if (num3 <= num4 || num3 === num4) {
       result3 = "Swift";
     } else if (num3 >= num5 || num3 === num5) {
       result3 = "Rust";

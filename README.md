@@ -1,8 +1,8 @@
-# _Independent Project 1_
+# _Independent Project 2_
 
 #### By _**Katherine Clasen**_
 
-#### _Portfolio Landing Page_
+#### _Programming Language Selector Webpage_
 
 ## Technologies Used
 
