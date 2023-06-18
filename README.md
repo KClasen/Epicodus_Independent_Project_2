@@ -13,14 +13,14 @@
 
 ## Description
 
-_This page allows the user to get to know the developer in training, Katherine Clasen. It provides a photo, bio, work history, and links to projects in GitHub. https://kclasen.github.io/Epicodus-Independent_Project1/_
+_This page provides suggestions for coding laguages to learn. The user answers a series of questions by providing a rating. The rating then gets submitted and the page provides language suggestions for the user to pursue. https://kclasen.github.io/Epicodus_Independent_Project_2/_
 
 ## Setup/Installation Requirements
 
 * Clone this repository to your desktop.
-* Navigate to the directory titled "Portfolio".
+* Navigate to the directory titled "Project 2".
 * Open the file "index.html" in your browser. 
-* _https://kclasen.github.io/Epicodus-Independent_Project1/_
+* _https://kclasen.github.io/Epicodus_Independent_Project_2/_
 
 
 ## Known Bugs
@@ -29,7 +29,7 @@ _This page allows the user to get to know the developer in training, Katherine C
 
 ## License
 
-Copyright (c) _June 3, 2023_ _Katherine Clasen_
+Copyright (c) _June18, 2023_ _Katherine Clasen_
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
