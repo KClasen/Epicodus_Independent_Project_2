@@ -1,11 +1,17 @@
 function handleSelector(event) {
   event.preventDefault();
   // const num1 = parseInt(document.querySelector("input#input1").value);
-  const num2 = parseInt(document.querySelector("input#input2").value);
-  const num3 = parseInt(document.querySelector("input#input3").value);
-  const num4 = parseInt(document.querySelector("input#input4").value);
-  const num5 = parseInt(document.querySelector("input#input5").value);
-  const num1 = document.getElementById("input#input1").value;
+  // const num2 = parseInt(document.querySelector("input#input2").value);
+  // const num3 = parseInt(document.querySelector("input#input3").value);
+  // const num4 = parseInt(document.querySelector("input#input4").value);
+  // const num5 = parseInt(document.querySelector("input#input5").value);
+  const num1 = parseInt(document.getElementById("input#input1").value);
+  const num2 = parseInt(document.getElementById("input#input2").value);
+  const num3 = parseInt(document.getElementById("input#input3").value);
+  const num4 = parseInt(document.getElementById("input#input4").value);
+  const num5 = parseInt(document.getElementById("input#input5").value);
+  let total = num1 + num2 + num3 + num4 + num5
+
    
 
   // let result1;
@@ -40,26 +46,26 @@ function handleSelector(event) {
   //   } else if (num3 >= num5 || num3 === num5) {
   //     result3 = "Rust";
   //   } 
-
-    if (num1 < 5 && num2 < 5){
+  let result; 
+    if (total <= 5){
       result = "Javascript"
-      document.getElementById("output1").innerText = result;
-    } else if (num3 < 5 && num4 < 5) {
+      document.getElementById("output").innerText = result;
+    } else if (total > 5 && total <= 15) {
       result = "Python"
-      document.getElementById("output1").innerText = result;
-    } else if (num4 < 5 && num5 < 5) {
+      document.getElementById("output").innerText = result;
+    } else if (total > 15 && total <= 25) {
       result = "Swift"
-      document.getElementById("output1").innerText = result;
+      document.getElementById("output").innerText = result;
     }
 
 
-  document.getElementById("output1").innerText = result;
+  document.getElementById("output").innerText = result;
   // document.getElementById("output2").innerText = result2;
   // document.getElementById("output3").innerText = result3; 
 }
   
 window.addEventListener("load", function() {
-  const form = document.getElementById("questions")
+  const form = document.getElementById("select-form")
   form.addEventListener("submit", handleSelector);
   const resetBtn = document.getElementById("reset");
     
@@ -68,12 +74,12 @@ window.addEventListener("load", function() {
     });
 
   resetBtn.addEventListener("click", function() {
-    document.querySelector("input#input1").value = null;
-    document.querySelector("input#input2").value = null;
-    document.querySelector("input#input3").value = null;
-    document.querySelector("input#input4").value = null;
-    document.querySelector("input#input5").value = null;
-    document.getElementById("output1").innerText = null;
+    document.querySelector("input#input1").value = 1;
+    document.querySelector("input#input2").value = 1;
+    document.querySelector("input#input3").value = 1;
+    document.querySelector("input#input4").value = 1;
+    document.querySelector("input#input5").value = 1;
+    document.getElementById("output").innerText = null;
     // document.getElementById("output2").innerText = null;
     // document.getElementById("output3").innerText = null;
     });
