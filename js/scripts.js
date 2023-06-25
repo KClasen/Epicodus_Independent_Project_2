@@ -22,18 +22,18 @@ function handleSelector(event) {
 window.addEventListener("load", function() {
   const form = document.getElementById("select-form");
   form.addEventListener("submit", handleSelector);
-  // const resetBtn = document.getElementById("reset");
+  const resetBtn = document.getElementById("reset");
     
-  // form.addEventListener("submit", function() {
-  //   resetBtn.removeAttribute("class");
-  //   });
+  form.addEventListener("submit", function() {
+    resetBtn.removeAttribute("class");
+    });
 
-  // resetBtn.addEventListener("click", function() {
-  //   document.getElementById("input#input1").value = null;
-  //   document.getElementById("input#input2").value = null;
-  //   document.getElementById("input#input3").value = null;
-  //   document.getElementById("input#input4").value = null;
-  //   document.getElementById("input#input5").value = null;
-  //   document.getElementById("output").innerText = null;
-  //   });
+  resetBtn.addEventListener("click", function() {
+    document.getElementById("input#input1").value = "1";
+    document.getElementById("input#input2").value = "1";
+    document.getElementById("input#input3").value = "1";
+    document.getElementById("input#input4").value = "1";
+    document.getElementById("input#input5").value = "1";
+    document.getElementById("output").innerText = "1";
+    });
 });
