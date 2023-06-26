@@ -1,3 +1,20 @@
 .hidden {
   display: none;
 }
+
+body {
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(24,24,70,1) 35%, rgba(0,141,170,1) 100%);
+  padding: 50px;
+  border-width: 3px;
+  font-family: 'Avenir', sans-serif;
+  color: rgb(148 163 184);
+}
+
+head {
+  color: white;
+}
+
+.form {
+  align-items: center;
+}
