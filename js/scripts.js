@@ -16,6 +16,7 @@ function handleSelector(event) {
       result = "Swift"
     }
 
+  document.querySelector("div#end").removeAttribute("class");
   document.getElementById("output").innerText = result;
 }
   
@@ -23,17 +24,15 @@ window.addEventListener("load", function() {
   const form = document.getElementById("select-form");
   form.addEventListener("submit", handleSelector);
   const resetBtn = document.getElementById("reset");
+  let end = document.getElementById("end");
     
   form.addEventListener("submit", function() {
     resetBtn.removeAttribute("class");
     });
 
   resetBtn.addEventListener("click", function() {
-    document.getElementById("input#input1").value = "1";
-    document.getElementById("input#input2").value = "1";
-    document.getElementById("input#input3").value = "1";
-    document.getElementById("input#input4").value = "1";
-    document.getElementById("input#input5").value = "1";
-    document.getElementById("output").innerText = "1";
+    end.setAttribute("class", "hidden");
+    document.getElementById("select-form").reset();
+    document.getElementById("input#input1").reset();
     });
 });
